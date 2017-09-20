@@ -11,6 +11,7 @@ var rename = require('gulp-rename');
 //var svgstore = require('gulp-svgstore');
 //var svgmin = require('gulp-svgmin');
 var cssmin = require('gulp-cssmin');
+var htmlmin = require('gulp-htmlmin');
 
 gulp.task('style', function() {
 	gulp.src('less/style.less')
@@ -62,6 +63,12 @@ gulp.task('styleprintmin', function() {
 		.pipe(cssmin())
 		.pipe(rename('print.min.css'))
 		.pipe(gulp.dest('css'));
+});
+
+gulp.task('htmlmin', function() {
+  return gulp.src('src/index.html')
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest(''));
 });
 
 gulp.task('images', function(){
