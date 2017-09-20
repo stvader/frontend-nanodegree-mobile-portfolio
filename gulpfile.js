@@ -58,10 +58,18 @@ gulp.task('stylemin', function() {
 });
 
 gulp.task('styleprintmin', function() {
-	gulp.src('css/style.css')		
+	gulp.src('css/print.css')		
 		.pipe(gulp.dest('css'))
 		.pipe(cssmin())
 		.pipe(rename('print.min.css'))
+		.pipe(gulp.dest('css'));
+});
+
+gulp.task('stylemobilemin', function() {
+	gulp.src('css/mobile.css')		
+		.pipe(gulp.dest('css'))
+		.pipe(cssmin())
+		.pipe(rename('mobile.min.css'))
 		.pipe(gulp.dest('css'));
 });
 
