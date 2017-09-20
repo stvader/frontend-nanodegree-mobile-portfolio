@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/stvader/frontend-nanodegree-mobile-portfolio/issues"
   },
-  "homepage": "https://github.com/stvader/frontend-nanodegree-mobile-portfolio#readme"
+  "homepage": "https://github.com/stvader/frontend-nanodegree-mobile-portfolio#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-rename": "^1.2.2"
+  }
 }
